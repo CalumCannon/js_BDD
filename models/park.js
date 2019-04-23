@@ -26,5 +26,34 @@ Park.prototype.mostPopular = function(){
   return mostPop;
 }
 
+Park.prototype.species = function(species){
+
+  let speciesArr = [];
+
+  for(dino of this.collection){
+      console.log("IN LOOP ", dino.species);
+    if(dino.species === species){
+
+      speciesArr.push(dino);
+
+    }
+
+  }
+
+  return speciesArr;
+}
+
+Park.prototype.removeAllSpecies = function(species){
+
+  for(var i=0; i<this.collection.length; i++){
+    let dino = this.collection[(this.collection.length-1)- i]
+    if(dino.species === species){
+      this.removeDinosaur(dino);
+    }
+  }
+
+}
+
+
 
 module.exports = Park;
