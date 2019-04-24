@@ -57,4 +57,20 @@ Park.prototype.removeAllSpecies = function(species){
   }
 }
 
+Park.prototype.returnDietTypesObject = function(){
+let object = {};
+
+  for(dino of this.collection){
+
+    if(object[dino.diet]){
+      object[dino.diet] += 1;
+    }else{
+      object[dino.diet] = 1;
+    }
+
+  }
+
+  return object;
+}
+
 module.exports = Park;

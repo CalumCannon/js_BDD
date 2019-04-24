@@ -66,4 +66,12 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, [dinosaur2,dinosaur3]);
   });
 
+  it('Provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type', function(){
+     const actual = park.returnDietTypesObject();
+     expect = {carnivore: 2};
+     assert.deepStrictEqual(actual, expect);
+  });
+
+
+
 });
