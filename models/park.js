@@ -20,6 +20,7 @@ Park.prototype.mostPopular = function(){
 
   for(dino of this.collection){
     if(dino.guestsAttractedPerDay > count){
+      count = dino.guestsAttractedPerDay;
       mostPop = dino;
     }
   }
