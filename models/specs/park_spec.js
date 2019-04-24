@@ -13,9 +13,11 @@ describe('Park', function() {
 
     dinosaur = new Dinosaur('t-rex', 'carnivore', 50);
     dinosaur2 = new Dinosaur('z-rex', 'carnivore', 100);
+    dinosaur3 = new Dinosaur('z-rex', 'carnivore', 100);
 
     park.addDinosaur(dinosaur)
     park.addDinosaur(dinosaur2)
+
 
   })
 
@@ -58,9 +60,10 @@ describe('Park', function() {
   });
 
   it('should be able to remove all dinosaurs of a particular species', function(){
+    park.addDinosaur(dinosaur3);
     park.removeAllSpecies('t-rex');
     const actual = park.collection;
-    assert.deepStrictEqual(actual, [dinosaur]);
+    assert.deepStrictEqual(actual, [dinosaur2,dinosaur3]);
   });
 
 });
