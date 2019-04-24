@@ -37,7 +37,6 @@ Park.prototype.species = function(species){
   let speciesArr = [];
 
   for(dino of this.collection){
-      console.log("IN LOOP ", dino.species);
     if(dino.species === species){
 
       speciesArr.push(dino);
